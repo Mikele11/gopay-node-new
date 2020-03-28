@@ -326,43 +326,7 @@ module.exports.GoPay = /** @class */ (function () {
             });
         });
     };
-    GoPay.prototype.refundPayment = function (id, data) {
-        // return __awaiter(this, void 0, void 0, function () {
-        //     var token, settings, res, error_9;
-        //     return __generator(this, function (_a) {
-        //         switch (_a.label) {
-        //             case 0: return [4 /*yield*/, this.getToken()];
-        //             case 1:
-        //                 token = _a.sent();
-        //                 if (!token || token === '')
-        //                     return [2 /*return*/, 'Error: Missing token'];
-        //                 settings = {
-        //                     method: 'POST',
-        //                     uri: this.apiUrl + "/payments/payment/" + id + "/refund",
-        //                     headers: {
-        //                         'Accept': 'application/json',
-        //                         'Content-Type': 'application/x-www-form-urlencoded',
-        //                         'Authorization': "Bearer " + token
-        //                     },
-        //                     json: true,
-        //                     body: {
-        //                         amount
-        //                     }
-        //                 };
-        //                 _a.label = 2;
-        //             case 2:
-        //                 _a.trys.push([2, 4, , 5]);
-        //                 return [4 /*yield*/, request(settings)];
-        //             case 3:
-        //                 res = _a.sent();
-        //                 return [2 /*return*/, res];
-        //             case 4:
-        //                 error_9 = _a.sent();
-        //                 return [2 /*return*/, "StatusCode: " + error_9.statusCode + ", message: " + error_9.message];
-        //             case 5: return [2 /*return*/];
-        //         }
-        //     });
-        // });
+    GoPay.prototype.refundPayment = function (id, amount) {
 
         return __awaiter(this, void 0, void 0, function () {
             var token, settings, res, error_6;
@@ -380,7 +344,9 @@ module.exports.GoPay = /** @class */ (function () {
                                 'Accept': 'application/json',
                                 'Authorization': "Bearer " + token
                             },
-                            body: data,
+                            body: {
+                                amount
+                            },
                             json: true
                         };
                         _a.label = 2;

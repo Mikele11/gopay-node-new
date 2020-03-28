@@ -1,6 +1,6 @@
 {
   "name": "gopay-node-new",
-  "version": "1.0.2",
+  "version": "0.0.1",
   "description": "library for gopay",
   "main": "index.js",
   "scripts": {
