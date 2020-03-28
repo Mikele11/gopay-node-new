@@ -326,13 +326,10 @@ module.exports.GoPay = /** @class */ (function () {
             });
         });
     };
-    GoPay.prototype.refundPayment = function (id, amount) {
+    GoPay.prototype.refundPayment = function (id, data) {
 
         return __awaiter(this, void 0, void 0, function () {
             var token, settings, res, error_6;
-            const bodyParameters = {
-                amount: amount
-            }
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0: return [4 /*yield*/, this.getToken()];
@@ -347,7 +344,7 @@ module.exports.GoPay = /** @class */ (function () {
                                 'Accept': 'application/json',
                                 'Authorization': "Bearer " + token
                             },
-                            body: bodyParameters,
+                            body: data,
                             json: true
                         };
                         _a.label = 2;
