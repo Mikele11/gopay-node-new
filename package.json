@@ -1,0 +1,15 @@
+{
+  "name": "gopay-node-new",
+  "version": "1.0.0",
+  "description": "library for gopay",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "author": "Michel Ilyash <mikeleilyash@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "request": "^2.83.0",
+    "request-promise-native": "^1.0.5"
+  }
+}
